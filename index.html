@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Donut Gamble ist ein kommendes Minecraft Casino mit einer süßen Donut-Thematik. Eröffnungsdatum: 15. Mai 2026, 15:00 Uhr (deutsche Zeit).">
+    <meta name="keywords" content="Minecraft, Casino, Donut, Online Glücksspiel, Minecraft Casino">
+    <meta property="og:title" content="Donut Gamble - Coming Soon">
+    <meta property="og:description" content="Das süßeste Minecraft Casino mit Donut-Thema! Kommt bald.">
+    <meta property="og:image" content="https://cdn.discordapp.com/attachments/1495395041848332441/1497514690690154506/IMG_2650.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.donutgamble.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Donut Gamble - Coming Soon">
+    <meta name="twitter:description" content="Das süßeste Minecraft Casino kommt bald. Sei bereit!">
+    <meta name="twitter:image" content="https://cdn.discordapp.com/attachments/1495395041848332441/1497514690690154506/IMG_2650.png">
+    <title>Donut Gamble - Coming Soon</title>
+    <style>
+        body {
+            background-color: #1e3a6a; /* Dunkelblau für den Seitenhintergrund */
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+        }
+        header {
+            background-color: #4c9fd3; /* Helles Blau für den Header-Bereich */
+            padding: 20px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        #countdown {
+            font-size: 2em;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #ffcc00;
+        }
+        .donut-image {
+            max-width: 60%;
+            height: auto;
+            margin-top: 40px;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Donut Gamble: Coming Soon!</h1>
+        <p>Get ready for the sweetest Minecraft casino experience!</p>
+    </header>
+
+    <img src="https://cdn.discordapp.com/attachments/1495395041848332441/1497514690690154506/IMG_2650.png?ex=69edccbc&is=69ec7b3c&hm=a519d1158caf1e082d27eee15d816cac4a4fc1a53c40c22347b538b3b49e3a9a&" alt="Donut Gamble Logo" class="donut-image">
+    <div id="countdown"></div>
+
+    <script>
+        const targetDate = new Date("May 15, 2026 15:00:00 GMT+0200"); // May 15, 2026 15:00 German time
+
+        function updateCountdown() {
+            const now = new Date();
+            const timeRemaining = targetDate - now;
+
+            const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        }
+
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
