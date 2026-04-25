@@ -3,201 +3,218 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Donut Gamble - Coming Soon</title>
+<title>Donut Gamble</title>
 
 <style>
-body {
+html, body {
     margin: 0;
+    padding: 0;
+    background: #0a0a0a;
     font-family: Arial, sans-serif;
-    background: radial-gradient(circle, #1a1a2e, #0f3460);
     color: white;
     text-align: center;
-    overflow-x: hidden;
-    overflow-y: auto;
 }
 
-/* HEADER TITLE */
+/* TITLE */
 h1 {
+    margin-top: 40px;
     font-size: 3em;
     background: linear-gradient(90deg, #ffcc00, #ff6600, #ff0000);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: glowMove 3s linear infinite;
-}
-
-@keyframes glowMove {
-    0% { filter: hue-rotate(0deg); }
-    100% { filter: hue-rotate(360deg); }
-}
-
-header {
-    padding: 40px;
 }
 
 /* LOGO */
-.donut-image {
-    max-width: 300px;
+.logo {
+    width: 200px;
     margin-top: 20px;
     border-radius: 50%;
-    animation: spin 12s linear infinite, pulseGlow 2s infinite;
 }
 
-@keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+/* SLOT */
+.slot-machine {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 15px;
 }
 
-/* SLOT ANIMATION */
-.slot {
-    font-size: 2em;
-    margin-top: 20px;
-    animation: slotMove 1s infinite linear;
+.reel {
+    width: 80px;
+    height: 100px;
+    border: 3px solid gold;
+    border-radius: 12px;
+    background: black;
+    box-shadow: 0 0 20px gold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-@keyframes slotMove {
-    from { transform: translateX(0); }
-    to { transform: translateX(-30px); }
+.reel span {
+    font-size: 2.5em;
 }
 
 /* COUNTDOWN */
 #countdown {
     font-size: 2em;
-    margin-top: 20px;
+    margin-top: 25px;
     color: #00ffcc;
 }
 
-/* DISCORD BUTTON */
+/* DISCORD */
 .discord-btn {
-    display: inline-block;
-    margin-top: 25px;
+    margin-top: 20px;
     padding: 15px 30px;
     background: #5865F2;
+    border-radius: 8px;
     color: white;
     text-decoration: none;
-    font-size: 1.2em;
-    border-radius: 8px;
-    animation: pulse 2s infinite;
 }
 
-@keyframes pulse {
-    0% { box-shadow: 0 0 10px #5865F2; }
-    50% { box-shadow: 0 0 25px #5865F2; }
-    100% { box-shadow: 0 0 10px #5865F2; }
-}
-
-/* INFO BOX */
+/* INFO */
 .info {
     margin-top: 40px;
-    background: rgba(255,255,255,0.05);
     padding: 20px;
-    border-radius: 10px;
-    display: inline-block;
 }
 
-/* SOUND BUTTON */
-.sound-btn {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: #ff6600;
-    border: none;
-    color: white;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-/* LAUNCH SCREEN */
-#launchScreen {
+/* LAUNCH */
+#launch {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle, #ffcc00, #ff6600, #000);
+    inset: 0;
+    background: radial-gradient(circle, gold, orange, black);
     display: none;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    z-index: 9999;
-    color: black;
-    text-align: center;
+    z-index: 999;
 }
 
-/* MOBILE */
-@media (max-width: 600px) {
-    h1 { font-size: 2em; }
-    #countdown { font-size: 1.5em; }
+/* COINS */
+.coin {
+    position: fixed;
+    top: -50px;
+    font-size: 24px;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    to { transform: translateY(110vh); }
 }
 </style>
 </head>
 
 <body>
 
-<!-- LAUNCH SCREEN -->
-<div id="launchScreen">
-    <h1>🎉 LAUNCHING NOW 🎉</h1>
-    <p>Welcome to Donut Gamble</p>
+<div id="launch">
+    <h1>🎉 JACKPOT RELEASE 🎉</h1>
+    <p>Donut Gamble is now LIVE!</p>
 </div>
 
-<header>
 <h1>🎰 Donut Gamble 🎰</h1>
+
+<img class="logo"
+src="https://cdn.discordapp.com/attachments/1495395041848332441/1497514690690154506/IMG_2650.png"
+onerror="this.src='https://via.placeholder.com/200?text=Donut+Gamble';">
+
 <p>The sweetest Minecraft Casino is coming...</p>
-</header>
 
-<img class="donut-image"
-src="https://cdn.discordapp.com/attachments/1495395041848332441/1497514690690154506/IMG_2650.png?ex=69edccbc&is=69ec7b3c&hm=a519d1158caf1e082d27eee15d816cac4a4fc1a53c40c22347b538b3b49e3a9a&"
-onerror="this.src='https://cdn.discordapp.com/attachments/1495395041848332441/1497514690690154506/IMG_2650.png?ex=69edccbc&is=69ec7b3c&hm=a519d1158caf1e082d27eee15d816cac4a4fc1a53c40c22347b538b3b49e3a9a&';">
-
-<div class="slot">🎲 🎰 💎 🎲 💰 🎰 💎</div>
+<!-- SLOT -->
+<div class="slot-machine">
+    <div class="reel"><span id="r1">💎</span></div>
+    <div class="reel"><span id="r2">🎰</span></div>
+    <div class="reel"><span id="r3">💰</span></div>
+</div>
 
 <div id="countdown"></div>
 
 <a class="discord-btn" href="https://discord.gg/tW8RyeVMkX" target="_blank">
-Join our Discord 💬
+Join Discord
 </a>
-
-<br>
-
-<button class="sound-btn" onclick="playSound()">🔊 Start Sound</button>
 
 <div class="info">
 <p>🚧 Development Progress: 40%+</p>
-<p>🎰 Unique Minecraft Casino Experience</p>
-<p>📅 Launch: 15 May 2026 - 15:00</p>
+<p>🎰 Unique Minecraft Casino System</p>
+<p>💎 Custom Games & Rewards</p>
+<p>🔥 Massive Launch Event</p>
+<p>📅 Launch: May 15, 2026 - 15:00</p>
 </div>
 
-<audio id="bgSound" loop>
-<source src="https://www.fesliyanstudios.com/play-mp3/4386" type="audio/mpeg">
-</audio>
+<!-- REAL CASINO SOUND -->
+<audio id="spinSound" src="https://www.fesliyanstudios.com/play-mp3/6677"></audio>
+<audio id="winSound" src="https://www.fesliyanstudios.com/play-mp3/4386"></audio>
 
 <script>
-const targetDate = new Date("2026-05-15T15:00:00+02:00");
+const symbols = ["💎","🎰","💰","🍩","7️⃣"];
 
-function updateCountdown() {
-    const now = new Date();
-    const diff = targetDate - now;
+/* SLOT LOOP SYSTEM */
+function spinLoop() {
+    spinAll();
+    setTimeout(spinLoop, 4000);
+}
+
+function spinReel(id, delay) {
+    let el = document.getElementById(id);
+    let speed = 60;
+    let total = 2000 + delay;
+
+    let interval = setInterval(() => {
+        el.innerHTML = symbols[Math.floor(Math.random()*symbols.length)];
+    }, speed);
+
+    setTimeout(() => {
+        clearInterval(interval);
+        el.innerHTML = symbols[Math.floor(Math.random()*symbols.length)];
+    }, total);
+}
+
+function spinAll() {
+    document.getElementById("spinSound").play();
+    spinReel("r1", 0);
+    spinReel("r2", 400);
+    spinReel("r3", 800);
+}
+
+spinLoop();
+
+/* COUNTDOWN */
+const target = new Date("2026-05-15T15:00:00+02:00");
+
+function update() {
+    let now = new Date();
+    let diff = target - now;
 
     if (diff <= 0) {
-        document.getElementById("countdown").innerHTML = "🎉 LIVE NOW!";
-        document.getElementById("launchScreen").style.display = "flex";
-        document.getElementById("bgSound").play();
+        document.getElementById("countdown").innerHTML = "LIVE!";
+        document.getElementById("launch").style.display = "flex";
+        document.getElementById("winSound").play();
+        spawnCoins(80);
         return;
     }
 
-    const d = Math.floor(diff / (1000*60*60*24));
-    const h = Math.floor((diff / (1000*60*60)) % 24);
-    const m = Math.floor((diff / (1000*60)) % 60);
-    const s = Math.floor((diff / 1000) % 60);
+    let d = Math.floor(diff / (1000*60*60*24));
+    let h = Math.floor(diff / (1000*60*60) % 24);
+    let m = Math.floor(diff / (1000*60) % 60);
+    let s = Math.floor(diff / 1000 % 60);
 
     document.getElementById("countdown").innerHTML =
-        d + "d " + h + "h " + m + "m " + s + "s";
+        d+"d "+h+"h "+m+"m "+s+"s";
 }
 
-function playSound() {
-    document.getElementById("bgSound").play();
-}
+setInterval(update, 1000);
+update();
 
-updateCountdown();
-setInterval(updateCountdown, 1000);
+/* COINS */
+function spawnCoins(amount) {
+    for (let i = 0; i < amount; i++) {
+        let coin = document.createElement("div");
+        coin.className = "coin";
+        coin.innerHTML = "💰";
+        coin.style.left = Math.random()*100+"%";
+        coin.style.animationDuration = (Math.random()*3+2)+"s";
+        document.body.appendChild(coin);
+    }
+}
 </script>
 
 </body>
