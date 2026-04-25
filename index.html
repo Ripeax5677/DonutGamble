@@ -64,18 +64,23 @@ h1 {
 
 /* DISCORD */
 .discord-btn {
-    margin-top: 20px;
+    margin-top: 33px; /* 🔥 etwas weiter runter */
     padding: 15px 30px;
     background: #5865F2;
     border-radius: 8px;
     color: white;
     text-decoration: none;
+    display: inline-block;
 }
 
 /* INFO */
 .info {
-    margin-top: 40px;
+    margin-top: 50px;
     padding: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
 }
 
 /* LAUNCH */
@@ -113,6 +118,7 @@ h1 {
 
 <h1>🎰 Donut Gamble 🎰</h1>
 
+<!-- 🔥 DEIN ORIGINAL LOGO -->
 <img class="logo"
 src="https://cdn.discordapp.com/attachments/1495395041848332441/1497514690690154506/IMG_2650.png"
 onerror="this.src='https://via.placeholder.com/200?text=Donut+Gamble';">
@@ -132,22 +138,43 @@ onerror="this.src='https://via.placeholder.com/200?text=Donut+Gamble';">
 Join Discord
 </a>
 
+<!-- 🔥 STORY / INFOS -->
 <div class="info">
 <p>🚧 Development Progress: 40%+</p>
-<p>🎰 Unique Minecraft Casino System</p>
-<p>💎 Custom Games & Rewards</p>
-<p>🔥 Massive Launch Event</p>
-<p>📅 Launch: May 15, 2026 - 15:00</p>
+
+<p>
+Donut Gamble started as an idea inspired by the well-known DonutSMP style servers.
+We wanted to create something different — not just another Minecraft server,
+but a unique casino experience inside Minecraft.
+</p>
+
+<p>
+Instead of classic gameplay, we focused on risk, reward and fun mechanics.
+From custom slot systems to special rewards, everything is designed
+to give players a completely new experience.
+</p>
+
+<p>
+💡 Why donuts? Because it’s fun, unique and instantly recognizable.
+We wanted a theme that stands out from typical casino styles.
+</p>
+
+<p>
+🔥 Our goal: Build the most entertaining Minecraft casino experience.
+</p>
+
+<p>
+📅 Launch: May 15, 2026 – 15:00
+</p>
 </div>
 
-<!-- REAL CASINO SOUND -->
+<!-- SOUNDS -->
 <audio id="spinSound" src="https://www.fesliyanstudios.com/play-mp3/6677"></audio>
 <audio id="winSound" src="https://www.fesliyanstudios.com/play-mp3/4386"></audio>
 
 <script>
 const symbols = ["💎","🎰","💰","🍩","7️⃣"];
 
-/* SLOT LOOP SYSTEM */
 function spinLoop() {
     spinAll();
     setTimeout(spinLoop, 4000);
@@ -169,7 +196,10 @@ function spinReel(id, delay) {
 }
 
 function spinAll() {
-    document.getElementById("spinSound").play();
+    let s = document.getElementById("spinSound");
+    s.currentTime = 0;
+    s.play();
+
     spinReel("r1", 0);
     spinReel("r2", 400);
     spinReel("r3", 800);
@@ -187,7 +217,11 @@ function update() {
     if (diff <= 0) {
         document.getElementById("countdown").innerHTML = "LIVE!";
         document.getElementById("launch").style.display = "flex";
-        document.getElementById("winSound").play();
+
+        let w = document.getElementById("winSound");
+        w.currentTime = 0;
+        w.play();
+
         spawnCoins(80);
         return;
     }
