@@ -4,224 +4,176 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- 🔍 SEO -->
-<title>DonutSMP Casino - Project Cancelled</title>
-<meta name="description" content="DonutSMP Casino was a Minecraft casino project that has been cancelled due to development issues and missing MFA provider.">
-<meta name="keywords" content="Minecraft Casino, DonutSMP, Cancelled Project, Minecraft Server, Casino Plugin">
-<meta name="author" content="DonutSMP Team">
-
-<meta property="og:title" content="DonutSMP Casino - Cancelled">
-<meta property="og:description" content="This Minecraft casino project has been cancelled.">
-<meta property="og:type" content="website">
+<title>DonutSMP Casino - Coming Soon</title>
 
 <style>
+/* 🔥 FIX WHITE BAR */
 html, body {
     margin: 0;
     padding: 0;
-    min-height: 100%;
     background: #0a0a0a;
     color: white;
-    font-family: Arial, sans-serif;
-    overflow-x: hidden;
-}
-
-/* CONTAINER */
-.container {
-    max-width: 850px;
-    margin: 60px auto;
-    padding: 20px;
+    font-family: Arial;
     text-align: center;
+    overflow-x: hidden;
 }
 
 /* TITLE */
 h1 {
-    font-size: 2.5em;
-    color: #ff4d4d;
+    margin-top: 40px;
+    font-size: 3em;
+    background: linear-gradient(90deg, gold, orange, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-/* TEXT */
-p {
-    color: #ccc;
-    line-height: 1.6;
-}
-
-/* BOX */
-.box {
+/* LOGO */
+.logo {
+    width: 180px;
     margin-top: 20px;
-    padding: 20px;
-    background: #111;
-    border: 1px solid #333;
+    border-radius: 50%;
+    animation: spin 6s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* SLOT */
+.slot {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.reel {
+    width: 80px;
+    height: 100px;
+    border: 3px solid gold;
     border-radius: 10px;
-    text-align: left;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5em;
+    box-shadow: 0 0 20px gold;
 }
 
-/* DEV STATS */
-.box h2 {
-    color: #ffcc00;
-    text-align: center;
-}
-
-/* TIMER */
-#timer {
+/* COUNTDOWN */
+#countdown {
     margin-top: 30px;
-    font-size: 1.6em;
+    font-size: 2em;
     color: #00ffcc;
-    text-align: center;
 }
 
-/* CHAT */
-.message {
-    background:#0d0d0d;
-    padding:10px;
-    border-radius:8px;
-    margin-top:10px;
-    opacity:0;
-    transform: translateY(10px);
-    animation: appear 0.4s forwards;
+/* USERS */
+#users {
+    margin-top: 10px;
+    color: #aaa;
 }
 
-@keyframes appear {
-    to {
-        opacity:1;
-        transform: translateY(0);
-    }
-}
-
-/* TYPING */
-#typing {
-    color:#888;
-    margin-top:10px;
-    display:none;
-    text-align:left;
-}
-
-/* FOOTER */
-footer {
-    margin-top: 50px;
-    font-size: 0.8em;
-    color: #555;
-    text-align: center;
+/* BUTTON */
+.btn {
+    margin-top: 25px;
+    padding: 12px 25px;
+    background: #5865F2;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<h1>🎰 DonutSMP Casino 🎰</h1>
 
-<h1>❌ DonutSMP Casino will never come</h1>
+<!-- 🔥 LOGO FIX -->
+<img class="logo"
+src="https://cdn.discordapp.com/attachments/1495395041848332441/1497514690690154506/IMG_2650.png"
+onerror="this.src='https://via.placeholder.com/180';">
 
-<p>
-A Minecraft casino project that has been officially cancelled.
-</p>
+<p>The casino is coming back... bigger than ever.</p>
 
-<!-- STORY -->
-<div class="box">
-<p>
-Hello,<br><br>
-
-We don’t have a MFA provider. Our provider was too lazy to continue development.<br><br>
-
-Sorry for the 14 registered people who were waiting for release.<br><br>
-
-This project started as a fun Minecraft casino idea inspired by community servers,
-but it could not be completed.
-</p>
+<!-- 🎰 SLOT -->
+<div class="slot">
+    <div class="reel" id="r1">🎰</div>
+    <div class="reel" id="r2">💰</div>
+    <div class="reel" id="r3">💎</div>
 </div>
 
-<!-- DEV STATS -->
-<div class="box">
-<h2>📉 Development Statistics</h2>
+<div id="countdown"></div>
+<div id="users"></div>
 
-<p>👥 Users lost: <b>12</b></p>
-<p>💸 Money lost: <b>$12.99</b></p>
-<p>🌐 Domain: <b>$12.99</b></p>
-<p>👨‍💻 Website Developers + Backend Developers: <b>$199.99</b></p>
-<p>🔥 Hype Website Assets: <b>$10.00</b></p>
-
-<hr style="border:1px solid #333;">
-
-<p style="color:#ff4444; text-align:center;">
-TOTAL PROJECT STATUS: FAILED ❌
-</p>
-</div>
-
-<!-- ⏱ TIMER -->
-<div id="timer"></div>
-
-<!-- 💬 CHAT -->
-<div class="box">
-<h2>💬 Developer Discord Chat Logs</h2>
-
-<div id="chat"></div>
-
-<div id="typing">
-User is typing<span id="dots">...</span>
-</div>
-</div>
-
-<footer>
-DonutSMP Casino • Archived Project
-</footer>
-
-</div>
+<a class="btn" href="https://discord.gg/tW8RyeVMkX" target="_blank">
+Join Discord
+</a>
 
 <script>
+const symbols = ["🎰","💰","💎","🍩","7️⃣"];
 
-/* GLOBAL TIMER */
-const cancelDate = new Date("2026-04-25T21:30:00+02:00");
-
-function updateTimer() {
-    const now = new Date();
-    const diff = now - cancelDate;
-
-    const d = Math.floor(diff / (1000*60*60*24));
-    const h = Math.floor(diff / (1000*60*60)%24);
-    const m = Math.floor(diff / (1000*60)%60);
-    const s = Math.floor(diff / 1000%60);
-
-    document.getElementById("timer").innerHTML =
-    "⏱️ Time since cancellation: " + d+"d "+h+"h "+m+"m "+s+"s";
+/* ✅ FIXED SLOT SYSTEM */
+function spin() {
+    spinReel("r1", 0);
+    spinReel("r2", 300);
+    spinReel("r3", 600);
 }
 
-setInterval(updateTimer,1000);
-updateTimer();
+function spinReel(id, delay) {
+    let el = document.getElementById(id);
 
-/* CHAT SYSTEM */
-const chat = document.getElementById("chat");
-const typing = document.getElementById("typing");
+    setTimeout(() => {
+        let spins = 20;
+        let interval = setInterval(() => {
+            el.innerHTML = symbols[Math.floor(Math.random()*symbols.length)];
+            spins--;
 
-function addMessage(user,text,color,delay){
-    setTimeout(()=>{
-        typing.style.display="block";
-
-        setTimeout(()=>{
-            typing.style.display="none";
-
-            let msg=document.createElement("div");
-            msg.className="message";
-            msg.innerHTML=`<b style="color:${color}">${user}:</b> ${text}`;
-            chat.appendChild(msg);
-
-        },1200);
-
-    },delay);
+            if (spins <= 0) {
+                clearInterval(interval);
+            }
+        }, 80);
+    }, delay);
 }
 
-/* CHAT SEQUENCE */
-addMessage("Owner","guys we need to talk...","#5865F2",1000);
-addMessage("Dev1","what happened?","#aaa",3000);
-addMessage("Owner","MFA provider is gone. we can't continue.","#5865F2",5000);
-addMessage("User_Kaam","wait WHAT? I was waiting for this 😭","#FFD700",7000);
-addMessage("Dev2","we were almost done...","#aaa",9000);
-addMessage("Owner","everything is blocked now.","#5865F2",11000);
-addMessage("User_Kaam","bro I told my friends about this 💀","#FFD700",13000);
-addMessage("Dev1","can we fix it somehow?","#aaa",15000);
-addMessage("Owner","we tried everything...","#5865F2",17000);
-addMessage("Dev2","all work is gone...","#aaa",19000);
-addMessage("Owner","I'm sorry... we have to cancel it.","#5865F2",21000);
-addMessage("User_Kaam","this is actually so sad man...","#FFD700",23000);
+/* LOOP */
+setInterval(spin, 3000);
+spin();
 
+/* COUNTDOWN */
+const target = new Date("2026-05-03T12:30:00+02:00");
+
+function update() {
+    let now = new Date();
+    let diff = target - now;
+
+    if (diff <= 0) {
+        document.getElementById("countdown").innerHTML = "🚀 LIVE!";
+        return;
+    }
+
+    let d = Math.floor(diff / (1000*60*60*24));
+    let h = Math.floor(diff / (1000*60*60)%24);
+    let m = Math.floor(diff / (1000*60)%60);
+    let s = Math.floor(diff / 1000%60);
+
+    document.getElementById("countdown").innerHTML =
+        d+"d "+h+"h "+m+"m "+s+"s";
+}
+
+setInterval(update,1000);
+update();
+
+/* USERS */
+let users = 12;
+setInterval(()=>{
+    users += Math.floor(Math.random()*3 - 1);
+    if(users < 5) users = 5;
+    document.getElementById("users").innerHTML =
+        "👥 "+users+" users waiting";
+},2000);
 </script>
 
 </body>
